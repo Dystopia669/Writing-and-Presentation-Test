@@ -291,4 +291,6 @@ Pada syntax diatas kita memasukkan beberapa property yang dimiliki oleh CSS yang
 Wrapper adalah pembungkus kontent, dengan menggunakan wrapper kita bisa dengan mudah mengatur ukuran dan jarak kontent yang dibungkus tersebut. pada code diatas, saya menggunakan ``class="wrapper"`` untuk membungkus table ``form``.
 
 3. **CSS** pada ``class="container"``
-Container adalah sebuah pondasi dasar dari blok layout. Container berfungsi sebagai pembungkus blok didalamnya sehingga kita bisa mengatur grid. Saya menggunakan ``container`` agar bisa membuat 2 kolom textbox. tampilan pada **HTML** nya adalah sebagai berikut :
+Container adalah sebuah pondasi dasar dari blok layout. Container berfungsi sebagai pembungkus blok didalamnya sehingga kita bisa mengatur grid. Saya menggunakan ``container`` agar bisa membuat 2 kolom textbox. tampilan pada **HTML** nya adalah sebagai berikut :<br>
+
+![grid](code snap/grid.PNG)
