@@ -293,4 +293,193 @@ Wrapper adalah pembungkus kontent, dengan menggunakan wrapper kita bisa dengan m
 3. **CSS** pada ``class="container"``
 Container adalah sebuah pondasi dasar dari blok layout. Container berfungsi sebagai pembungkus blok didalamnya sehingga kita bisa mengatur grid. Saya menggunakan ``container`` agar bisa membuat 2 kolom textbox. tampilan pada **HTML** nya adalah sebagai berikut :<br>
 
-![grid.PNG]( {https://github.com/Dystopia669/Writing-and-Presentation-Test/blob/main/code%20snap/grid.PNGhttps://github.com/Dystopia669/Writing-and-Presentation-Test/blob/main/code%20snap/grid.PNG} )
+![grid.png]( https://github.com/Dystopia669/Writing-and-Presentation-Test/blob/757fd2ea50213e82fbe00a913ca5a88fe0a1b1b4/code%20snap/grid.PNG )
+
+4. **CSS** pada ``form-group``
+Pada syntax ini berguna untuk mengatur tampilan textbox . Berikut adalah source code nya :
+```
+.form-group input[type="text"] {
+    column-gap: 50px;
+    width: auto;
+    height: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+```
+- ``column-gap`` : berfungsi untuk mengatur jarak antar textbox, sehingga antara textbox 1 dengan yang lainnya tidak berdempetan
+- ``display: inline-block`` : berfungsi untuk mengatur grid  secara horizontal
+
+---
+## **Javascript**
+### a. Pengenalan JavaScript
+- **JavaScript** atau yang biasa disingkat menjadi **JS** adalah sebuah bahasa pemrograman yang digunakan dalam pengembangan website agar lebih dinamis dan interaktif. **javascript** digunakan untuk memanipulasi data, membuat website menjadi interaktif, membuat fitur dan lainnya.
+- **JavaScript** jika diibaratkan seperti pakaian dan style pada manusia. Javascript membuat website menjadi dinamis,  interaktif, menarik dan stylish
+- Jika ingin membuat sebuah file **JavaScript** didalam code editor, maka ekstensi file nya adalah _.js_
+- **console.log** adalah suatu command javascript untuk menampilkan data ke console browser
+- **Variable** adalah sebuah wadah untuk menampung nilai. Ada beberapa hal yang harus diperhatikan dalam membuat variable : <br>
+    1. penulisan variable dianjurkan menggunakan camel case. contoh penulisan menggunakan camel case adalah : ``variableSatu``, ``contohVariable``
+    2. penamaan variable tidak dianjurkan sama. Sebab dapat membuat program yang kita buat dapat mengalami error dikarenakan mendeteksi variable yang sama
+    3. variable tidak dapat diawali dengan angka
+- Ada 3 jenis variable didalam javascript, yaitu :
+    1. var
+    2. let
+    3. const
+- **function** dalam javascript adalah sebuah blok untuk menyelesaikan sebuah perintah yang diiginkan. contoh membuat function : <br>
+```
+function namaFunction() {
+    return 'hai, ini adalah contoh membuat sebuah function'
+}
+```
+untuk memanggil function adalah dengan langsung memanggil nama function yang kita buat. seperti : <br>
+```
+namaFunction()
+console.log(namaFunction());
+```
+### b. Membuat variable, function dan menampilkannya di Console menggunakan JavaScript
+
+>kita akan membuat sebuah proses data menggunakan javascript, yang mana data tersebut terdapat ``variable``, ``function`` dan ``aksi`` yang ditrigger dengan javascript.
+
+- **Syntax JavaScript :** <br>
+```
+const namaKelompok = document.getElementById('nama-kelompok');
+const anggotaSatu = document.getElementById('anggota-satu');
+const anggotaDua = document.getElementById('anggota-dua');
+const anggotaTiga = document.getElementById('anggota-tiga');
+const anggotaEmpat = document.getElementById('anggota-empat');
+const namaJurusan = document.getElementById('nama-jurusan');
+const formPendaftaran = document.getElementById('form-pendaftaran');
+
+function getFormData () {
+    return {
+        namaKelompok: namaKelompok.value,
+        anggotaSatu: anggotaSatu.value,
+        anggotaDua: anggotaDua.value,
+        anggotaTiga: anggotaTiga.value,
+        anggotaEmpat: anggotaEmpat.value,
+        namaJurusan: namaJurusan.value
+    }
+}
+
+function addData(event) {
+    console.log(getFormData())
+    event.preventDefault();
+}
+
+formPendaftaran.addEventListener("submit", addData)
+
+function resetForm () {
+    document.querySelector('form').reset()
+    }
+```
+
+- **Penjelasan Syntax**
+1. **Membuat variable** dengan menggunakan tipe data ``const`` yang mana nantinya variable ini akan menampung sebuah nilai yang kita inputkan. berikut adalah syntax yang variable :
+```
+const namaKelompok = document.getElementById('nama-kelompok');
+const anggotaSatu = document.getElementById('anggota-satu');
+const anggotaDua = document.getElementById('anggota-dua');
+const anggotaTiga = document.getElementById('anggota-tiga');
+const anggotaEmpat = document.getElementById('anggota-empat');
+const namaJurusan = document.getElementById('nama-jurusan');
+const formPendaftaran = document.getElementById('form-pendaftaran');
+```
+syntax ``document.getElementById('namaId')`` diambil dari id yang kita tulis pada file **HTML**. Fungsinya adalah untuk memberitahu program bahwa nilai tersebut datang dari ``id`` yang kita tentukan dan akan dimasukkan menjadi variable
+
+2. **Membuat function dan mengembalikan nilainya**, yang dimaksud mengembalikan nilainya disini adalah, ketika kita menggunakan function tersebut maka kita menyuruh program kita untuk menampung nilai dari variable yang kita buat. oleh sebab itu kita menggunakan ``return``. berikut adalah syntax nya : <br>
+```
+function getFormData () {
+    return {
+        namaKelompok: namaKelompok.value,
+        anggotaSatu: anggotaSatu.value,
+        anggotaDua: anggotaDua.value,
+        anggotaTiga: anggotaTiga.value,
+        anggotaEmpat: anggotaEmpat.value,
+        namaJurusan: namaJurusan.value
+    }
+}
+```
+3. **Proses menambahkan data** dengan menggunakan build bawaan dari javascript sendiri yaitu ``event`` dan ``.preventDefault()``. Berikut adalah syntax codenya : <br>
+```
+function addData(event) {
+    console.log(getFormData())
+    event.preventDefault();
+}
+```
+4. **trigger aksi dengan ``.addEventListener`` dan ``.reset()``** agar data yang kita isi dapat disimpan maupun direset pada web browser. Berikut adalah syntax untuk triger aksi :
+```
+formPendaftaran.addEventListener("submit", addData)
+
+function resetForm () {
+    document.querySelector('form').reset()
+    }
+```
+---
+## **GIT dan Command Line pada Git**
+
+- Git adalah sebuah tools untuk control system pada sebuah source code. Git juga digunakan untuk melacak setiap perubahan yang terjadi pada file, folder maupun source code
+- Yang paling sering digunakan oleh para programmer di dunia adalah Github dan Gitlab sebagai wadah untuk menampung repository code mereka
+
+## **Konfigurasi dan cara menggunakan git**
+- Langkah pertama untuk menggunakan git dalam device anda adalah dengan menginstall ``Git Bash`` terlebih dahulu. Git Bash adalah sebuah terminal untuk kita memberikan command yang akan dieksekusi
+- Untuk membuat repository menggunakan command ``git init``
+- ``git status`` untuk mengecek dimana letak branch kita pada git, dan untuk memastikan tidak ada perubahan pada repository
+- ``git remote`` adalah command untuk penghubung antara directory kita dengan directory yang ada pada repository git
+- ``git add`` untuk menambah file pada git
+- ``git commit -m`` adalah command untuk memberikan massage keterangan ke repository atas perubahan yang dilakukan
+- ``git push`` adalah command untuk mengupload file atau folder yang ada pada directory kita ke directory repository git. misal branch kita pada repository git bernama main, maka command nya adalah ``git push -u oirigin main``
+- ``git branch -b 'nama branch'`` digunakan untuk membuat branch baru 
+- ``git checkout`` digunakan untuk berpindah branch
+
+---
+## **Algoritma dan Pseudocode**
+
+### **Algoritma**
+
+- Algoritma adalah sebuah proses atau alur dalam pemecahan sebuah masalah yang dilakukan secara berurutan
+- Dalam sebuah program, Algoritma adalah hal yang wajib dimiliki dalam membangun sebuah program dikarenakan Algoritma adalah penentu alur jalannya sebuah program
+- Algoritma yang baik memiliki beberapa kriteria :
+    - input dan output yang jelas
+    - setiap langkah yang di lalui jelas dan tidak ambigu
+    - algoritma dibuat agar ddapat diimplementasi kedalam bahasa pemrograman apapun, sehingga dalam pembuatan algoritma tidak mengandung unsur bahasa pemrograman tertentu
+- Pentingnya Algoritma dalam pemrograman :
+    - menentukan alur sebuah program, agar ketika program telah selesai dibuat tidak terjadi alur yang ambigu
+    - dengan menggunakan algoritma maka pemrograman dapat mengidentifikasi struktur data yang digunakan
+    - struktur data digunakan untuk mengolah sebuah data
+
+- Contoh Membuat sebuah Algoritma : <br>
+```
+Input angka1 = 2
+Input angka2 = 3
+output = angka1 + angka 2
+Print (output)
+```
+
+### **Pseudocode**
+- Pseudocode adalah tools yang digunakan untuk menuliskan algoritma
+- tata cara penulisan pseudocode :
+    - bersifat spesifik
+    - Menulis perintah menggunakan huruf kapital
+    - 1 statement hanya terdiri dari 1 baris
+- contoh pesudocode : <br>
+```
+program penentuan usia
+
+deklarasi
+var umur : integer
+
+algoritma:
+INPUT umur
+IF (umur >= 17 ) THEN
+    OUTPUT "remaja"
+ELSE IF (umur >= 10 ) THEN
+    OUTPUT "anak-anak"
+ELSE
+    OUTPUT "TUA"
+```
+
+
+
+
+
