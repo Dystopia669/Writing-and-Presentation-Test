@@ -293,4 +293,4 @@ Wrapper adalah pembungkus kontent, dengan menggunakan wrapper kita bisa dengan m
 3. **CSS** pada ``class="container"``
 Container adalah sebuah pondasi dasar dari blok layout. Container berfungsi sebagai pembungkus blok didalamnya sehingga kita bisa mengatur grid. Saya menggunakan ``container`` agar bisa membuat 2 kolom textbox. tampilan pada **HTML** nya adalah sebagai berikut :<br>
 
-![grid](code snap/grid.PNG)
+![grid.PNG]({code snap/grid.PNG})
