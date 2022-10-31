@@ -114,4 +114,4 @@ Tipe data merupakan jenis nilai yang bisa ditampung pada suatu variable, bisa be
 ### 4. Menenentukan entitas dan atribut
 **Entitas** adalah benda, tempat, unit, objek atau hal lainnya yang mempresentasikan data, dan data tersebut akan disimpan ke dalam pangkal data. Contoh umum entitas pada database adalah : user, product, order, payment dll. **Atribut** adalah ciri atau karakter yang membedakan antara entitas 1 dengan entitas yang lainnya, contoh umum atribut didalam database adalah : id user, alamat user, nomor hp, harga product, jumlah order dll. Berikut adalah contoh table yang berisikan entitas User dan atributnya dalam sebuah database : <br>
 
-![grid.png] (https://github.com/Dystopia669/Writing-and-Presentation-Test/blob/5e0f5ec168e7c7dc774da65b537f1565dab878fa/week%205/table%20user.png)
+![user.png] (https://github.com/Dystopia669/Writing-and-Presentation-Test/blob/5e0f5ec168e7c7dc774da65b537f1565dab878fa/week%205/table%20user.png)
